@@ -1,0 +1,31 @@
+<head>
+    <style>
+        .button1{
+	background-color: blue;
+}
+.button2{
+	background-color: blue;
+}
+.button3{
+	background-color:blue;
+}
+ 
+    </style>
+</head>
+ <body>
+    <div class="container">
+        <button type="button" class="btn btn-primary" id="button1">go to market</button>
+        <button type="button" class="btn btn-primary" id="button2">login</button>
+       
+
+    </div>
+    <script>
+            document.getElementById('button1').addEventListener("click", function() {
+	window.location.replace('http://localhost:3000/user_market');
+});
+    document.getElementById('button2').addEventListener("click", function() {
+	window.location.replace('http://localhost:3000/user_login');
+});
+
+    </script>
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   
+</head>
+<body style="background-color:lightgrey">
+<section>
+<div class="container">
+<h1>{{title}}</h1>
+<table id="share_table" class="table table-sm table-dark">
+<tr>
+<th>share code</th>
+<th>share name</th>
+<th>In market</th>
+<th>IN holding</th>
+<th>current rate</th>
+</tr>
+{{#each share}}
+<tr>
+ <td>{{this.share_code}}</td>
+ <td>{{this.share_name}}</td>
+ <td>{{this.in_market}}</td>
+ <td>{{this.in_holdings}}</td>
+ <td>{{this.current_rate}}</td>
+ 
+</tr>
+{{/each}}
+</table>
+<button type="button" class="btn btn-primary" id="button1">buy/sell</button>
+<button type="button" class="btn btn-primary" id="button2">login</button>
+ 
+
+
+</div>
+</section>
+<div class='bg-modal'>
+	<div class='modal-contents'>
+
+		<div class="close">+</div>
+		
+
+		<form action="/user_market/create" method="post">
+		    <input type="number" placeholder="user_number" name="user_number">
+		    <input type="number" placeholder="share code" name="share_code">
+			<input type="number" placeholder="quantity" name="quantity">
+			<input type="submit"  class="btn btn-info" name="submit" value="buy" placeholder="buy">
+			<input type="submit"  class="btn btn-info" name="submit" value="sell" placeholder="sell">
+			<!--<button  class="btn btn-info">Submit</button>-->
+		</form>
+
+	</div>
+</div>
+</body>
+</html>

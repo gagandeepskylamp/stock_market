@@ -1,0 +1,30 @@
+<body style="background-color:lightgrey">
+<div class="container">
+<h1>{{title}}</h1>
+<table id="ownership_table" class="table table-sm table-dark">
+<tr>
+
+<th>share code</th>
+<th>quantity</th>
+
+
+</tr>
+{{#each ownership}}
+<tr>
+ 
+ <td>{{this.share_code}}</td>
+ <td>{{this.quantity}}</td>
+ 
+
+</tr>
+{{/each}}
+</table>
+<button type="button" class="btn btn-primary" id="button3">logout</button>
+</div>
+
+<script>
+    document.getElementById('button3').addEventListener("click", function() {
+	window.location.replace('http://localhost:3000');
+});
+</script>
+</body>
